@@ -3,7 +3,9 @@
 #   Output event details on "issues"
 
 name: lint test and deploy on push
-on: push
+on: 
+  # push:
+  workflow_dispatch:
 jobs:
   lint:
     runs-on: ubuntu-latest

@@ -3,7 +3,9 @@
 #   Output event details on "issues"
 
 name: output event details
-on: issues
+on: 
+  # issues:
+  workflow_dispatch:
 jobs:
   output:
     runs-on: ubuntu-latest

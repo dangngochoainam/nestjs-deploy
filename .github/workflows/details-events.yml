@@ -1,10 +1,11 @@
 name: details events
 on:
-  pull_request:
-    types:
-      - opened
-    branches:
-      - master
+  workflow_dispatch:
+  # pull_request:
+  #   types:
+  #     - opened
+  #   branches:
+  #     - master
 jobs:
   output:
     runs-on: ubuntu-latest
