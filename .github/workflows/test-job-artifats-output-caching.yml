@@ -35,7 +35,7 @@ jobs:
       - name: Run test
         run: npm run test
       - name: Download artifacts
-      - uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4
         with:
           name: dist-without-markdown
       - name: Output files
