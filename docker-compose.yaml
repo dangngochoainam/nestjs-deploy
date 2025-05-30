@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  # NestJS Application instances
+  app1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    ports:
+      - "3001:1234"
+    networks:
+      - docker_stack
+  
+  app2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=3002
+    ports:
+      - "3002:1234"
+    networks:
+      - docker_stack
+  
+  app3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=3003
+    ports:
+      - "3003:1234"
+    networks:
+      - docker_stack
+      
+networks:
+  docker_stack:
+    external: true
+
+ 
